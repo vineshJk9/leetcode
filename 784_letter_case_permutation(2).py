@@ -6,13 +6,13 @@ class Solution(object):
             return self.l.append("".join(s))
 
             
-        self.letterCasePermutation(s, n-1)
+        self.letterCasePermutation1(s, n-1)
         if n>0 and s[n-1].isalpha():
             if s[n-1].islower():
                 s[n-1] = s[n-1].upper()
             else:                     
                 s[n-1] = s[n-1].lower() 
-            self.letterCasePermutation(s, n-1)
+            self.letterCasePermutation1(s, n-1)
         return self.l
     def letterCasePermutation(self, s):
         """
